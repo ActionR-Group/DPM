@@ -1,4 +1,4 @@
-# DPM
+# Stream-GCN
 
 # Prerequisites
 
@@ -77,13 +77,13 @@ Put downloaded data into the following directory structure:
 
 ```
 # Example: training on NTU RGB+D 120 cross subject under bone modality
-python main_ddpm2.py --config config/nturgbd120-cross-subject/default.yaml --train_feeder_args bone=True --test_feeder_args bone=True --work-dir work_dir/ntu120/csub/gcn_bone --device 0
+python main_ddpm2.py --config config/nturgbd120-cross-subject/default.yaml --train_feeder_args bone=True --test_feeder_args bone=True --work-dir work_dir/ntu120/csub/Streamgcn_bone --device 0
 ```
 
 - To train model on NW-UCLA with others modalities, you need to modify `data_path` in `train_feeder_args` and `test_feeder_args` to "bone" or "motion" or "bone motion", and run
 
 ```
-python main_ddpm2.py --config config/ucla/default.yaml --work-dir work_dir/ucla/gcn_xxx --device 0
+python main_ddpm2.py --config config/ucla/default.yaml --work-dir work_dir/ucla/Streamgcn_xxx --device 0
 ```
 
 ### Testing
@@ -96,7 +96,7 @@ python main.py --config <work_dir>/config.yaml --work-dir <work_dir> --phase tes
 
 - To ensemble the results of different modalities, run 
 ```
-# Example: ensemble all modalities on NTU RGB+D cross subject
+# Example: ensemble four modalities of StreamGCN on NTU RGB+D cross subject
 python ensemble.py --dataset ntu/csub --joint-dir work_dir/ntu/csub/joint ... --joint-curl-dir work_dir/ntu/csub/mask ...
 
 ```
