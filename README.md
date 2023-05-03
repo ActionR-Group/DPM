@@ -96,7 +96,7 @@ python main.py --config <work_dir>/config.yaml --work-dir <work_dir> --phase tes
 
 - To ensemble the results of different modalities, run 
 ```
-# Example: ensemble four modalities of StreamGCN on NTU RGB+D cross subject
+# Example: ensemble six streams of GCN on NTU RGB+D cross subject
 python ensemble.py --dataset ntu/csub --joint-dir work_dir/ntu/csub/joint ... --joint-curl-dir work_dir/ntu/csub/mask ...
 
 ```
