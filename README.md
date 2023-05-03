@@ -1,4 +1,4 @@
-# Stream-GCN
+# DPM-based framework
 
 # Prerequisites
 
